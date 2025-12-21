@@ -1,6 +1,7 @@
 public class App {
     public static void main(String[] args) {
-        DemoClass.set("VS Code", 0.f);
-        DemoClass.get();
+        Person guy = new Person();
+        guy.setName("Suhas Nag");
+        System.out.println("My Name is " + guy.getName());
     }
 }
