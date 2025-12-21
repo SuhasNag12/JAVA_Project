@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) {
-        Person guy = new Person();
-        guy.setName("Suhas Nag");
-        System.out.println("My Name is " + guy.getName());
+        Car car = new Car();
+        car.model = "Ritz";
+        System.out.println("My Car's model is " + car.model);
     }
 }
