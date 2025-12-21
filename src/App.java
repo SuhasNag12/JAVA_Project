@@ -1,7 +1,12 @@
+class MathUtils {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+}
+
 public class App {
     public static void main(String[] args) {
-        Bike bike = new Bike();
-        bike.setSpeed(65);
-        System.out.println("I ride my bike with a speed of " + bike.getSpeed());
+
+        System.out.println("Sum of two numbers is: " + MathUtils.add(5, 6));
     }
 }
