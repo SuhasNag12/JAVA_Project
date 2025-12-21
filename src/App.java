@@ -1,12 +1,28 @@
-class MathUtils {
-    public static int add(int a, int b) {
-        return a + b;
+class Person {
+    String name;
+    int age;
+
+    Person() {
+        System.out.println("This is a default constructor.");
+    }
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+        System.out.println("This is a Parameterized Constructor,\nName: " + name + "\nAge: " + age);
+    }
+
+    Person(Person obj2) {
+        name = obj2.name;
+        age = obj2.age;
+        System.out.println("This is a Copy Constructor,\nName: " + name + "\nAge: " + age);
     }
 }
 
 public class App {
     public static void main(String[] args) {
-
-        System.out.println("Sum of two numbers is: " + MathUtils.add(5, 6));
+        Person person1 = new Person();
+        Person person2 = new Person("Suhas Nag", 30);
+        Person person3 = new Person(person2);
     }
 }
