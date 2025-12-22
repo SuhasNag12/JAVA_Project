@@ -1,12 +1,26 @@
+interface Add {
+    int add(int a, int b);
+}
+
+interface Sub {
+    int sub(int a, int b);
+}
+
+class Calculate implements Add, Sub {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int sub(int a, int b) {
+        return a - b;
+    }
+}
+
 public class App {
     public static void main(String[] args) {
-        Car car = new Car();
-        car.speedUp(48);
-        car.changeGear(3);
-        System.out.println(car.toString());
-        Bike bike = new Bike();
-        bike.speedUp(88);
-        bike.changeGear(5);
-        System.out.println(bike.toString());
+        Calculate cal = new Calculate();
+        int resultAdd = cal.add(54, 32);
+        int resultSub = cal.sub(32, 8);
+        System.out.println("Sum of two numbers: " + resultAdd + "\nSubtraction betwen two numbers: " + resultSub);
     }
 }
