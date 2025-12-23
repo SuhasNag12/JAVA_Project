@@ -1,26 +1,19 @@
-interface Add {
-    int add(int a, int b);
-}
+class Programmer {
+    private String name;
 
-interface Sub {
-    int sub(int a, int b);
-}
-
-class Calculate implements Add, Sub {
-    public int add(int a, int b) {
-        return a + b;
+    public String getName() {
+        return name;
     }
 
-    public int sub(int a, int b) {
-        return a - b;
+    public void setName(String name) {
+        this.name = name;
     }
 }
 
 public class App {
     public static void main(String[] args) {
-        Calculate cal = new Calculate();
-        int resultAdd = cal.add(54, 32);
-        int resultSub = cal.sub(32, 8);
-        System.out.println("Sum of two numbers: " + resultAdd + "\nSubtraction betwen two numbers: " + resultSub);
+        Programmer p1 = new Programmer();
+        p1.setName("Suhas Nag");
+        System.out.println("Our Programmer name is " + p1.getName());
     }
 }
