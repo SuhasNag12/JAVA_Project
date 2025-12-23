@@ -1,19 +1,31 @@
-class Programmer {
-    private String name;
-
-    public String getName() {
-        return name;
+class Animal {
+    public void sound() {
+        System.out.println("Animals makes sound.");
     }
+}
 
-    public void setName(String name) {
-        this.name = name;
+class Dog extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Dog barks.");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Cat meows.");
     }
 }
 
 public class App {
+
     public static void main(String[] args) {
-        Programmer p1 = new Programmer();
-        p1.setName("Suhas Nag");
-        System.out.println("Our Programmer name is " + p1.getName());
+        Animal dog = new Dog();
+        dog.sound();
+
+        Animal cat = new Cat();
+        cat.sound();
+
     }
 }
