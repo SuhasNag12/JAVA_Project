@@ -1,7 +1,9 @@
 class App {
     public static void main(String[] args) {
-        
-        System.out.println("Method 1 result: " + Calculate.Multiply(2, 3));
-        System.out.println("Method 1 result: " + Calculate.Multiply(2, 3, 4));
+        Parent s1 = new SubClass1();
+        Parent s2 = new SubClass2();
+
+        s1.print();
+        s2.print();
     }
 }
