@@ -1,6 +1,7 @@
 class App {
     public static void main(String[] args) {
-        Person person = new Friend();
-        person.role();
+        
+        System.out.println("Method 1 result: " + Calculate.Multiply(2, 3));
+        System.out.println("Method 1 result: " + Calculate.Multiply(2, 3, 4));
     }
 }
